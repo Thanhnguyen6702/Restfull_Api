@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Assert;
+import org.junit.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import static io.restassured.RestAssured.given;

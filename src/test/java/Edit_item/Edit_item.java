@@ -13,7 +13,7 @@ import static io.restassured.RestAssured.given;
 
 public class Edit_item {
     @ParameterizedTest
-    @CsvFileSource(resources = "/Edit_item.csv", numLinesToSkip = 2)
+    @CsvFileSource(resources = "/Edit_item.csv", numLinesToSkip = 4)
     void run_Test(String access_token, String Id, String name, String Starting_price, String brand_id, String description, String series, String images1, String images2, String images3, String images4, String images5, String code, String message) {
         BaseClass.init();
         Data input = new Data();

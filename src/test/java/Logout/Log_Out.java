@@ -13,7 +13,6 @@ public class Log_Out {
     @CsvFileSource(resources = "/logout.csv",numLinesToSkip =2 )
     public void Test_logout(String access_token,String code,String message){
         BaseClass.init();
-        SessionFilter sessionFilter = new SessionFilter();
         Response rp = given().contentType("application/json").header("Authorization","Bearer"+access_token).when().post("/logout");
         if(rp.getStatusCode()==302) {
            Response rp2 = given().expect().statusCode(200).when().get(rp.getHeader("Location"));
